@@ -1,0 +1,55 @@
+Parte III.
+Se creo un nuevo paquete dentro del paquete registros llamado "matematicas", en el cual se agregaron 2 clases nuevas
+	•Monomio: Esta clase solo tiene los getters, setters y el toString.
+	•Polinomio: En esta clase se agregaron los siguientes metodos:
+		•public void agregarMonomios()
+		•public void imprimirPolinomio()
+		•private void imprimirPol()
+		•public void determinarGrado()
+		•private void determinarG()
+		•public int getGrado()
+		•public void xEscalar(int escalar)
+		•private void xEscalar(int escalar,int posicion)
+		•public void xMonomio(Monomio m)
+		•private void xMonomio(Monomio m,int posicion)
+		•public void xPolinomio(Polinomio p)
+		•private void xPol(Polinomio p)
+		•public void sumaPolinomio(Polinomio p)
+		•private void sumaPol(Polinomio p)
+
+Esta clase solo soporta polinomios de una sola variable.
+La forma en la que se agregan los monomios es la constante(si es que lleva), seguido de la variable(si lleva variable) y 
+por ultimo la potencia de la variable si no lleva variable la potencia por default seria 1 para la constante (Al menos tiene
+que agregar un elemento del monomio para que se agregue).
+Ejemplos de monomios:
+3x2 -> 3 constante, x variable que si se usa x, use siempre x porque no soporta mas variables, y por ultimo la variable x esta a la potencia 2.
+x -> Variable, que quedara con constante 1 y potencia 1
+x2 -> Variable con constante 1 y potencia 2.
+
+Esta clase contiene su clase de prueba dentro del paquete "pruebas", llamada "PruebaPolinomio".
+
+Parte IV.
+Se creo una nueva clase llamada ListaGrupos, dentro del paquete "estructurasnolineales".
+En ella se agregaron los siguientes metodos.
+	•public boolean agregarCabeza(Object elemento)
+	•public boolean agregarCabezaInicio(Object elemento)
+	•public Object eliminarInicioCabeza()
+	•public Object eliminarFinalCabeza()
+	•public Object eliminarCabeza(Object elemento)
+	•public Object buscarCabeza(Object elemento)
+	•public void imprimirCabezas()
+	•private void imprimirCabezas(NodoDoble tmp)
+	•public void imprimirCabezaYElementos(Object cabeza)
+	•public boolean agregarAGrupo(Object cabeza,Object elemento)
+	•public Object eliminarFinalGrupo(Object cabeza)
+	•public Object buscarGrupo(Object cabeza,Object elemento)
+	•public void imprimirElementos(Object cabeza)
+	•public void imprimir()
+	•public Object eliminar(Object elemento)
+	•public Object buscar(Object elemento)
+
+Se creo una clase de prueba llamada "PruebaListaGrupo" en el paquete "pruebas". Esta prueba esta lista para solo correrse. 
+
+
+NOTA: Todos los metodos contienen comentarios de documentacion, por lo tanto la documentacion se encutra
+      dentro de "edylab_2021_Examen_2/doc".

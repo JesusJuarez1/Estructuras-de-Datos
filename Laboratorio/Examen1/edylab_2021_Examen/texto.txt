@@ -1,0 +1,35 @@
+package entradasalida.archivos;
+
+import edlineal.Arreglo;
+import edlineal.ListaDobleLigada;
+
+import java.io.*;
+
+public class ArchivoTexto {
+
+    public static Arreglo leer(String archivo, int tamanioArchivo{
+        FileReader input=null;
+        int registro=0;
+
+        Arreglo datos=new Arreglo(tamanioArchivo);
+        try {
+            String cadena=null;
+            input = new FileReader(archivo;
+            BufferedReader buffer = new BufferedReader(input);
+            while((cadena = buffer.readLine())!=null) {
+                datos.agregar(Double.parseDouble(cadena));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                input.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
+        return datos;
+    }

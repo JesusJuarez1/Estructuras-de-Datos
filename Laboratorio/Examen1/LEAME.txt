@@ -1,0 +1,29 @@
+Se agregaron 3 clases nuevas:
+	Simbolo: Esta clase almacena el símbolo, la línea y la posición del carácter que contiene el error.
+		Esta clase no contiene ningún método.
+		Esta clase se encuentra dentro del paquete "herramientas/texto/Simbolo".
+
+	MenuTexto: Esta clase se creó para hacer el menú con el cual presentar las opciones al usuario,
+		las opciones son 2, la de verificar el balanceo correcto de una cadena y de un archivo.
+		Esta clase se encuentra dentro del paquete "herramientas/texto/MenuTexto".
+		•menu()
+
+	PruebaBalanceo: Esta es la prueba que manda llamar al método menú de MenuTexto.
+		Esta clase se encuentra dentro del paquete "pruebas".
+
+Además de esas clases se agregaron 2 métodos nuevos a la clase Balanceo que se encuentran dentro 
+del paquete "herramientas/texto/Balanceo".
+	Balanceo: Esta clase contiene métodos estáticos con los cuales podremos mandarle un mensaje o el 
+	   nombre de un archivo dependiendo de que método se escoja y este evaluara si es que esta correctamente 
+	   balanceado o si hay algún error lo imprime en pantalla indicando donde se encuentra dicho error.
+	   Dentro de esta clase existe otro método el cual ya estaba ahí de una práctica pasada.
+		•public static boolean estaBalanceadoParentesis(String cadena) //Método que ya se encontraba en la clase.
+		•public static boolean balanceoCadena(String cadena)
+		•public static boolean balanceoArchivo(String archivo)
+
+Dentro del proyecto se encuentra un archivo con el cual se pude hacer la prueba para ver si tiene errores con el
+método balanceoArchivo. A este archivo se le quitaron algunos paréntesis y llaves para que diera error y mostrara
+la información de dicho error.
+
+Toda la documentación del proyecto (que incluye lo que se hizo ahora) está dentro de la carpeta del proyecto en 
+una carpeta llamada "doc".

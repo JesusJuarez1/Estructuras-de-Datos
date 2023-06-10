@@ -1,0 +1,46 @@
+El ejercicio se basa en el modelo que viene en el archivo MOM.pdf.
+Se basa en 3 urnas las cuales contienen 100 pelotitas las cuales pueden ser de 3 colores diferentes (Negro, Verde y Rojo).
+Las espesificaciones son las siguientes:
+• Estados: {“Urna 1”, “Urna 2”, “Urna 3”}
+• Observaciones: {“Negro”, “Verde”, ”Rojo”}
+• Probabilidad inicial: {.3, .5, .2}
+• Probabilidad Transición: {
+	“Urna 1”: {“Urna 1” .2, “Urna 2” .5, “Urna 3” .3}
+	“Urna 2”: {“Urna 1” .3, “Urna 2” .2, “Urna 3” .5}
+	“Urna 3”: {“Urna 1” .5, “Urna 2” .3, “Urna 3” .2}
+	}
+•Probabilidad emisión: {
+	“Urna 1”: {“Negro” .3, “Verde” .5, “Rojo” .2}
+	“Urna 2”: {“Negro” .2, “Verde” .3, “Rojo” .5}
+	“Urna 3”: {“Negro” .6, “Verde” .2, “Rojo” .2}
+	}
+
+
+La prueba esta dentro del paquete pruebas "PruebaHMM", la cual responde todas las preguntas con el programa,
+obtiene la probabilidad de obtener una secuencia de estados, y una secuencia de observaciones 
+(el estado inicial esta determinado por su probabilidad inicial y se elige aleatoriamente de acuerdo
+a estas probabilidades). En ambos casos el resultado siempre puede variar debido a su probabilidad inicial, ademas
+en el segundo caso varia tambien por su probabilidad de transicion la cual se elige como la probabilidad inicial (aleatoriamente
+determinado por su probabilidad).
+
+Se realizo la clase HMM la cual esta dentro del paquete "mom".
+En esta clase se hicieron los siguientes metodos:
+	◘ HMM:
+		• private void agregarEstados()
+		• private void agregarProbabilidades()
+		• public Double probabilidadIniciar(Object estado)
+		• public Double probabilidadObtener(Object estado,Object observacion)
+		• public Double probabilidadCambiar(Object estadoIncial,Object estadoACambiar)
+		• public Double probabilidadObtenerSecuenciaEstados(ArregloDatos secuencia)
+		• public Double probabilidadObtenerSecuenciaObservaciones(ArregloDatos secuencia)
+
+Para elegir aleatoriamente un elemento en base a su probabilidad se hizo un nuevo metodo en la clase Herramientas,
+la cual se encuentra dentro del paquete "herramientas.comunes".
+	◘ Herramientas:
+		•public static Object obtenerAleatorioProbabildad(ArregloDatos datos, ArregloDatos probabilidades)
+Este metodo contiene documentacion a nivel de linea para un mejor entendimiento.
+
+
+
+NOTA: Todo lo echo durante el examen esta documentado, la documentacion del proyecto se encuentra dentro de
+      "adylab_2021_examen_3/doc".
